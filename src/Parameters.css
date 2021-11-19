@@ -1,0 +1,16 @@
+li {
+  width: 100%;
+}
+i {
+  margin: 2px;
+  color: #5f6769;
+  text-align: right;
+  padding: 0px 10px;
+}
+#today-parameters {
+  margin-top: 50px;
+}
+.list-group-item {
+  border: none;
+  background: transparent;
+}

@@ -1,0 +1,30 @@
+.card-header {
+  min-height: 160px;
+}
+
+.top-row {
+  padding-bottom: 50px;
+}
+.celsius {
+  font-size: 15px;
+}
+span {
+  position: relative;
+  top: -45px;
+  right: -85px;
+}
+.current-comment-container {
+  text-align: center;
+  margin-top: -25px;
+}
+.today-temperature {
+  text-align: center;
+}
+.today-icon {
+  width: 80px;
+  display: block;
+  margin: auto;
+}
+.card-img-top {
+  width: 55px;
+}

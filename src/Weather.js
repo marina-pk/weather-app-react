@@ -1,25 +1,33 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
+import "./Weather.css";
+import image from "./images/m-c-rain.png";
+export default function Weather() {
+  return (
+    <div className="col-5">
+      <h5 className="card-title" id="currentCity">
+        Toronto, ON
+      </h5>
+      <h6 className="card-subtitle mb-2 text-muted" id="currentDayCard">
+        Thursday 3:30 pm
+      </h6>
+      <div className="row">
+        <div className="col-7 weather-temperature">
+          <img
+            src={image}
+            className="card-img-top today-icon"
+            id="current-day-icon"
+            alt="weather-icon"
+          />
 
-export default function Weather(props) {
-  const [temperature, setTemperature] = useState(null);
-
-  function showTemperature(response) {
-    setTemperature(response.data.main.temp);
-  }
-
-  if (temperature) {
-    return (
-      <h4>
-        The temperature in {props.city} is {Math.round(temperature)}°C
-      </h4>
-    );
-  } else {
-    let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-    let units = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=${units}`;
-
-    axios.get(apiUrl).then(showTemperature);
-    return <h4>Loading temperature for {props.city}...</h4>;
-  }
+          <h3 className="today-temperature">19</h3>
+          <span className="temperature-unit">
+            <p className="celsius">°C</p>
+          </span>
+          <div className="current-comment-container">
+            <small className="today-comment">A few showers</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

@@ -1,11 +1,16 @@
+import React from "react";
 import "./App.css";
-import Weather from "./Weather";
-function App() {
+import Search from "./Search";
+import Footer from "./Footer";
+import Current from "./Current";
+export default function App() {
   return (
     <div className="App">
-      <Weather city="Toronto" />
+      <div className="container">
+        <Search />
+        <Current />
+      </div>
+      <Footer />
     </div>
   );
 }
-
-export default App;
