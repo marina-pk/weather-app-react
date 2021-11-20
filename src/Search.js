@@ -55,18 +55,31 @@ export default function Search() {
     return (
       <div>
         {form}
+        <div className="col-5">
+          <h5 className="card-title" id="currentCity">
+            {weather.cityName}
+          </h5>
+          <div className="row">
+            <div className="col-3 weather-temperature">
+              <img
+                src={weather.icon}
+                className="card-img-top today-icon"
+                id="current-day-icon"
+                alt={weather.description}
+              />
 
-        <ul>
-          <li>Temperature: {Math.round(weather.temperature)}°C</li>
-          <li>Description: {weather.description}</li>
-          <li>City: {weather.cityName}</li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind: {weather.wind}km/h</li>
-          <li>Low: {Math.round(weather.low)}°C</li>
-          <li>
-            <img src={weather.icon} alt={weather.description} />
-          </li>
-        </ul>
+              <h3 className="today-temperature">
+                {Math.round(weather.temperature)}
+              </h3>
+              <span className="temperature-unit">
+                <p className="celsius">°C</p>
+              </span>
+              <div className="current-comment-container">
+                <small className="today-comment">{weather.description}</small>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   } else {
