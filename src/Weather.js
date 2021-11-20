@@ -1,11 +1,11 @@
 import React from "react";
 import "./Weather.css";
 import image from "./images/m-c-rain.png";
-export default function Weather() {
+export default function Weather(props) {
   return (
     <div className="col-5">
       <h5 className="card-title" id="currentCity">
-        Toronto, ON
+        {props.city}
       </h5>
       <h6 className="card-subtitle mb-2 text-muted" id="currentDayCard">
         Thursday 3:30 pm

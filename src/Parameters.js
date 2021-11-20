@@ -11,20 +11,20 @@ export default function Parameters() {
     <div id="today-parameters" className="col-7">
       <ul className="list-group list-group-horizontal">
         <li className="list-group-item">
-          <FontAwesomeIcon icon={faTemperatureLow} />
+          <FontAwesomeIcon icon={faTemperatureLow} className="param-icons" />
           Low
         </li>
         <li className="list-group-item current-low-temperature">15°</li>
       </ul>
       <ul className="list-group list-group-horizontal-sm">
         <li className="list-group-item">
-          <FontAwesomeIcon icon={faTint} /> Humidity
+          <FontAwesomeIcon icon={faTint} className="param-icons" /> Humidity
         </li>
         <li className="list-group-item current-humidity">55%</li>
       </ul>
       <ul className="list-group list-group-horizontal-md">
         <li className="list-group-item">
-          <FontAwesomeIcon icon={faWind} />
+          <FontAwesomeIcon icon={faWind} className="param-icons" />
           Wind
         </li>
         <li className="list-group-item current-wind-speed">14 km/h</li>

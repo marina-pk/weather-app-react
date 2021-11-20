@@ -1,11 +1,10 @@
 li {
   width: 100%;
 }
-i {
-  margin: 2px;
+.param-icons {
+  margin: 0px 10px;
   color: #5f6769;
   text-align: right;
-  padding: 0px 10px;
 }
 #today-parameters {
   margin-top: 50px;
