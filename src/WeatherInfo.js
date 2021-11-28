@@ -6,7 +6,7 @@ import {
   faTint,
   faWind,
 } from "@fortawesome/free-solid-svg-icons";
-
+import WeatherUnits from "./WeatherUnits";
 export default function WeatherInfo(props) {
   return (
     <div className="row top-row">
@@ -32,13 +32,7 @@ export default function WeatherInfo(props) {
                       id="current-day-icon"
                       alt="weather-icon"
                     />
-
-                    <h3 className="today-temperature">
-                      {Math.round(props.data.temperature)}
-                    </h3>
-                    <span className="temperature-unit">
-                      <p className="celsius">°C</p>
-                    </span>
+                    <WeatherUnits celsius={props.data.temperature} />
                     <div className="current-comment-container">
                       <small className="today-comment text-capitalize">
                         {props.data.description}
