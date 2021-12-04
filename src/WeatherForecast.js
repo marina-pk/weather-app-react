@@ -23,7 +23,7 @@ export default function WeatherForecast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col-2">
+          <div className="col-2 my-no-padding">
             <div className="card" id="daily-parameters">
               <div className="card-header"></div>
               <div className="card-body">
@@ -54,7 +54,7 @@ export default function WeatherForecast(props) {
           {forecast.map(function (dailyForecast, index) {
             if (index < 5) {
               return (
-                <div className="col-2" key={index}>
+                <div className="col-2 my-no-padding" key={index}>
                   <WeatherForecastDay data={dailyForecast} />
                 </div>
               );
