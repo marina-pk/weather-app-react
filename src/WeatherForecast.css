@@ -1,3 +1,23 @@
 .my-no-padding {
   padding: 0px;
 }
+.WeatherForecast {
+  margin: 12px;
+}
+
+.no-bk {
+  background: transparent;
+}
+
+.no-border {
+  border: none;
+}
+
+.gray-bk {
+  background: lightgray;
+}
+
+.daily-stats-card h6 {
+  font-weight: 900;
+  letter-spacing: 2px;
+}

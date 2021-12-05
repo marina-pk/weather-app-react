@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./WeatherForecast.css";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 import WeatherForecastDay from "./WeatherForecastDay";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -24,9 +25,9 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row">
           <div className="col-2 my-no-padding">
-            <div className="card" id="daily-parameters">
-              <div className="card-header"></div>
-              <div className="card-body">
+            <div className="card no-border" id="daily-parameters">
+              <div className="card-header no-bk no-border"></div>
+              <div className="card-body gray-bk">
                 <ul className="list-group list-group-horizontal">
                   <li className="list-group-item">
                     <FontAwesomeIcon
@@ -73,6 +74,15 @@ export default function WeatherForecast(props) {
 
     axios.get(apiUrl).then(handleResponse);
 
-    return null;
+    return (
+      <div className="spinner">
+        <Loader
+          type="Puff"
+          color="#00BFFF"
+          height={100}
+          width={100} //3 secs
+        />
+      </div>
+    );
   }
 }

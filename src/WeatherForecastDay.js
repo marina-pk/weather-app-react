@@ -31,7 +31,7 @@ export default function WeatherForecastDay(props) {
   return (
     <div className="card text-center daily-stats-card">
       <div className="card-header">
-        <h6 className="card-subtitle mb-2 text-muted">{day()}</h6>
+        <h6 className="card-subtitle mb-2 text-muted title">{day()}</h6>
         <img
           src={icon}
           className="card-img-top today-icon"
@@ -40,7 +40,10 @@ export default function WeatherForecastDay(props) {
         />
         <br />
         <h3> {maxTemperature()}</h3>
-        <small> {props.data.weather[0].description}</small>
+        <small className="text-capitalize">
+          {" "}
+          {props.data.weather[0].description}
+        </small>
       </div>
       <div className="card-body">
         <ul className="list-group list-group-horizontal">
