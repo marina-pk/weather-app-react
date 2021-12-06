@@ -21,3 +21,8 @@
   font-weight: 900;
   letter-spacing: 2px;
 }
+.daily-stats-card:hover {
+  border-color: #0074e4;
+  border-width: 2px;
+  transition: 3ms ease-in-out;
+}
